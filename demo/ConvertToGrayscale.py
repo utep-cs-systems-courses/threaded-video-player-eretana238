@@ -20,7 +20,7 @@ while inputFrame is not None and count < 72:
 
     # convert the image to grayscale
     grayscaleFrame = cv2.cvtColor(inputFrame, cv2.COLOR_BGR2GRAY)
-    
+
     # generate output file name
     outFileName = f'{outputDir}/grayscale_{count:04d}.bmp'
 
@@ -31,10 +31,6 @@ while inputFrame is not None and count < 72:
 
     # generate input file name for the next frame
     inFileName = f'{outputDir}/frame_{count:04d}.bmp'
-    
+
     # load the next frame
     inputFrame = cv2.imread(inFileName, cv2.IMREAD_COLOR)
-
-
-    
-    
