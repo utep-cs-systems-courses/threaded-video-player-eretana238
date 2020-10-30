@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import cv2
-import threading
+from threading import Thread, Semaphore, Lock
 import numpy as np
 import base64
 
@@ -19,14 +19,26 @@ import base64
 # qlock.release()
 # empty.release()
 
-class Extract(Thread):
-    def __init__(self):
-        pass
+semaphore = Semaphore(2)
+qlock = Lock()
+queue = []
 
-class Convert(Thread):
-    def __init__(self):
-        pass
+def extract_frames(file_name, output_buffer, max_frames=9999):
+    """
+    docstring
+    """
+    pass
 
-class Display(Thread):
-    def __init__(self):
-        pass
+def convert_frames():
+    """
+    docstring
+    """
+    
+def display_frames(parameter_list):
+    """
+    docstring
+    """
+    pass
+
+if __name__ == "__main__":
+    
