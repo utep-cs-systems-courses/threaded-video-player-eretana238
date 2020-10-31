@@ -4,7 +4,6 @@ import cv2
 import threading
 import numpy as np
 import base64
-import sys
 
 class ExtractFrames(threading.Thread):
     def __init__(self, file_name, max_frames=9999):
